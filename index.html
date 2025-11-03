@@ -23,8 +23,8 @@
   <body>
     <model-viewer
   id="arViewer"
-  src="https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/model.glb"
-  ios-src="https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/ios-model.usdz"
+  src="https://raw.githubusercontent.com/my-g1t/my-g1t.github.io/main/model.glb"
+  ios-src="https://raw.githubusercontent.com/my-g1t/my-g1t.github.io/main/ios-model.usdz"
   ar
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
@@ -39,7 +39,7 @@
     const viewer = document.querySelector("#arViewer");
 
     if (isIOS) {
-      viewer.setAttribute("src", "https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/ios-model.usdz");
+      viewer.setAttribute("src", "https://raw.githubusercontent.com/my-g1t/my-g1t.github.io/main/ios-model.usdz");
       viewer.removeAttribute("ios-src");
     }
   });
