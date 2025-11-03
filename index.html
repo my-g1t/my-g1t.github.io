@@ -22,13 +22,27 @@
   </head>
   <body>
     <model-viewer
-      src="model.glb"
-      ios-src="model.usdz"
-      ar
-     ar-modes="webxr scene-viewer quick-look"
+  id="arViewer"
+  src="https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/model.glb"
+  ios-src="https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/ios-model.usdz"
+  ar
+  ar-modes="webxr scene-viewer quick-look"
   camera-controls
   auto-rotate
+  shadow-intensity="1"
   alt="3D model"
 ></model-viewer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const viewer = document.querySelector("#arViewer");
+
+    if (isIOS) {
+      viewer.setAttribute("src", "https://raw.githubusercontent.com/kate-user/kate-user.github.io/main/ios-model.usdz");
+      viewer.removeAttribute("ios-src");
+    }
+  });
+</script>
   </body>
 </html>
