@@ -80,7 +80,7 @@ model-viewer {
   transition: transform 0.3s, opacity 0.3s;
 }
 .Hotspot {
-  transform: scale(0.6); 
+  transform: scale(0.7); 
 }
 
 
