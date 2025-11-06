@@ -1,16 +1,18 @@
-<model-viewer src="island11.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.15" camera-orbit="116.3deg 72.76deg 0.2582m" field-of-view="30deg" shadow-softness="1" exposure="1.23">
-    <button class="Hotspot" slot="hotspot-1" data-position="0.01096090720226485m 0.04052082324348604m -0.034869493987579325m" data-normal="0.14044264427172604m -0.36440488253004943m -0.9205894553264373m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">fishing</div>
-    </button><button class="Hotspot" slot="hotspot-2" data-position="0.046531118930208074m 0.042447829661462294m -0.00033318784842971644m" data-normal="0.8922737985498744m 0.04644495149716032m 0.44909947105491543m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">swimming</div>
-    </button><button class="Hotspot" slot="hotspot-4" data-position="0.001745050579458585m 0.03927260268050817m 0.02719339506776921m" data-normal="0.24622075238916508m 0.8699516176703095m -0.42726984916528465m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">inflatable island</div>
-    </button><button class="Hotspot" slot="hotspot-5" data-position="0.0010381035048981635m 0.03700751453247578m -0.010817471471387206m" data-normal="0.09737528561950183m 0.9775517746675094m -0.1868437357658088m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">relaxation</div>
-    </button><button class="Hotspot" slot="hotspot-6" data-position="-0.02795337128709077m 0.031595030857112294m 0.0022945562448685505m" data-normal="-0.09458306772695438m 0.9945350768459238m 0.044204346193905376m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">sunbathing</div>
-    </button><button class="Hotspot" slot="hotspot-7" data-position="-0.02276348546591841m 0.035804328938799465m -0.029311515737710757m" data-normal="0.3547724127112625m 0.8513907403680866m 0.3863552023650143m" data-visibility-attribute="visible">
+<model-viewer id="island" src="island11.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.5" exposure="1.09" shadow-softness="1" camera-orbit="100.2deg 55.79deg 0.2357m" field-of-view="25.18deg">
+    <button class="Hotspot" slot="hotspot-2" data-position="-0.016404709652748373m 0.036900305774705426m -0.02543384666511641m" data-normal="-0.37859636790764833m 0.8961839956083969m 0.23134181684794008m" data-visibility-attribute="visible">
         <div class="HotspotAnnotation">snack time</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="0.041937995210507506m 0.03199468410312002m -0.022941695516167843m" data-normal="0.4935995910182741m 0.7478683912322251m -0.443905748039284m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">fishing</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="0.05215796235639252m 0.036916162470089824m -0.0027524531292967246m" data-normal="0.8436020170190622m 0.39197985333249086m -0.3669978630221282m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">swimming</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-position="-0.0006902711200780327m 0.03618662324713477m -0.0041223838315797776m" data-normal="-0.013458075962995605m 0.9850407779671083m 0.17179506958387544m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">relax
+        </div>
+    </button><button class="Hotspot" slot="hotspot-8" data-position="-0.030618438097432716m 0.031223720472538064m 0.0050968784635215935m" data-normal="-0.1078339193754152m 0.9938000977411225m 0.02707787956749265m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">sunbathing
+        </div>
+    </button><button class="Hotspot" slot="hotspot-9" data-position="-0.001403174857654222m 0.03928502202214733m 0.025845757435161428m" data-normal="0.2263118764274508m 0.8098286551283919m -0.5412582414345548m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">inflatable island</div>
     </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
