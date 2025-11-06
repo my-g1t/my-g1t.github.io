@@ -1,16 +1,18 @@
-<model-viewer src="island11.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.44" exposure="1.02" shadow-softness="1" camera-orbit="-134.4deg 68.84deg 0.2582m" field-of-view="29.86deg">
-    <button class="Hotspot" slot="hotspot-1" data-position="0.04852349220892386m 0.04043322708326712m -0.005057855226125712m" data-normal="0.6993110979735946m 0.5151438765579676m -0.49557116007269353m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">swimming</div>
-    </button><button class="Hotspot" slot="hotspot-2" data-position="0.034175542555662575m 0.03086025419884215m -0.03614700493581867m" data-normal="0.965457734998854m -0.2222228937605676m 0.1360453873512894m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">fishing</div>
-    </button><button class="Hotspot" slot="hotspot-3" data-position="-0.022140218983289023m 0.035780846908245706m -0.029832086883627252m" data-normal="0.3547724127112625m 0.8513907403680865m 0.3863552023650143m" data-visibility-attribute="visible">
+<model-viewer id="island" src="island11.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.5" exposure="1.09" shadow-softness="1" camera-orbit="100.2deg 55.79deg 0.2357m" field-of-view="25.18deg">
+    <button class="Hotspot" slot="hotspot-2" data-position="-0.016404709652748373m 0.036900305774705426m -0.02543384666511641m" data-normal="-0.37859636790764833m 0.8961839956083969m 0.23134181684794008m" data-visibility-attribute="visible">
         <div class="HotspotAnnotation">snack time</div>
-    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.033772440890962m 0.03158649373941095m 0.0016176756864232297m" data-normal="0.06462815364894714m 0.9905028288468581m 0.12135628456037979m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">sunbathing</div>
-    </button><button class="Hotspot" slot="hotspot-5" data-position="-0.003925626957623461m 0.041267979796996014m 0.02790682110606195m" data-normal="0.27096788693647167m 0.8623910033566552m -0.42761917821665235m" data-visibility-attribute="visible">
+    </button><button class="Hotspot" slot="hotspot-4" data-position="0.041937995210507506m 0.03199468410312002m -0.022941695516167843m" data-normal="0.4935995910182741m 0.7478683912322251m -0.443905748039284m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">fishing</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="0.05215796235639252m 0.036916162470089824m -0.0027524531292967246m" data-normal="0.8436020170190622m 0.39197985333249086m -0.3669978630221282m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">swimming</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-position="-0.0006902711200780327m 0.03618662324713477m -0.0041223838315797776m" data-normal="-0.013458075962995605m 0.9850407779671083m 0.17179506958387544m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">relax
+        </div>
+    </button><button class="Hotspot" slot="hotspot-8" data-position="-0.030618438097432716m 0.031223720472538064m 0.0050968784635215935m" data-normal="-0.1078339193754152m 0.9938000977411225m 0.02707787956749265m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">sunbathing
+        </div>
+    </button><button class="Hotspot" slot="hotspot-9" data-position="-0.001403174857654222m 0.03928502202214733m 0.025845757435161428m" data-normal="0.2263118764274508m 0.8098286551283919m -0.5412582414345548m" data-visibility-attribute="visible">
         <div class="HotspotAnnotation">inflatable island</div>
-    </button><button class="Hotspot" slot="hotspot-6" data-position="-0.0004224296021448056m 0.036504287410209536m -0.008402503354943573m" data-normal="-0.122394360694005m 0.8536765512921861m 0.506217311284576m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">relax</div>
     </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
