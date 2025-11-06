@@ -92,27 +92,19 @@
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <script type="module">
-  const model = document.querySelector("#island");
+  <script type="module">
+  const viewer = document.querySelector("#hotspot-camera-view-demo");
 
-  const moveToHotspot = (hotspot) => {
-    const ds = hotspot.dataset;
-    if (ds.target) model.cameraTarget = ds.target;
-   if (ds.orbit) {
+  viewer.querySelectorAll('button').forEach((hotspot) => {
+    hotspot.addEventListener('click', () => {
+      const orbit = hotspot.dataset.orbit;
+      const target = hotspot.dataset.target;
+      const fov = hotspot.dataset.fov || '45deg'; // если не указано, ставим стандарт
       
-      const parts = ds.orbit.split(" ");
-      const radius = parseFloat(parts[2]); 
-      const zoom = radius * 0.6; 
-
-      const newOrbit = `${parts[0]} ${parts[1]} ${zoom}m`;
-      model.cameraOrbit = newOrbit;
-    }
-
-    model.fieldOfView = "22deg"; 
-  };
-
-  model.querySelectorAll(".Hotspot").forEach(btn => {
-    btn.addEventListener("click", () => moveToHotspot(btn));
+      if (orbit) viewer.cameraOrbit = orbit;
+      if (target) viewer.cameraTarget = target;
+      viewer.fieldOfView = fov;
+    });
   });
 </script>
   </body>
