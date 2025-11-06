@@ -23,17 +23,4 @@
     <div id="ar-prompt">
         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
     </div>
-<script>
-  const modelViewer = document.querySelector('#island');
-
-  document.querySelectorAll('.Hotspot').forEach(hotspot => {
-    hotspot.addEventListener('click', () => {
-      const pos = hotspot.dataset.position; 
-      modelViewer.cameraTarget = pos;       
-
-      modelViewer.cameraOrbit = "0deg 75deg 0.15m";
-      modelViewer.fieldOfView = "20deg";
-    });
-  });
-</script>
 </model-viewer>
