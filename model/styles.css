@@ -66,10 +66,11 @@ model-viewer {
   left: calc(100% + 1em);
   max-width: 128px;
   overflow-wrap: break-word;
-  padding: 0.5em 1em;
+  padding: 0.35em 0.7em;
   position: absolute;
   top: 50%;
   width: max-content;
+  font-size: 14px; 
 }
 
 .Hotspot:not([data-visible]) > * {
@@ -78,6 +79,10 @@ model-viewer {
   transform: translateY(calc(-50% + 4px));
   transition: transform 0.3s, opacity 0.3s;
 }
+.Hotspot {
+  transform: scale(0.6); 
+}
+
 
 
 .progress-bar {
