@@ -70,6 +70,7 @@ model-viewer {
   position: absolute;
   top: 50%;
   width: max-content;
+  font-size: 14px; 
 }
 
 .Hotspot:not([data-visible]) > * {
@@ -78,6 +79,7 @@ model-viewer {
   transform: translateY(calc(-50% + 4px));
   transition: transform 0.3s, opacity 0.3s;
 }
+
 
 
 .progress-bar {
