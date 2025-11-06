@@ -12,7 +12,7 @@
     
     <!-- <model-viewer> HTML element -->
     <model-viewer id="island" src="island8.glb" 
-  ar ar-modes="scene-viewer webxr quick-look" 
+  ar interpolation-decay="200" ar-modes="scene-viewer webxr quick-look" 
   camera-controls tone-mapping="neutral" 
   poster="poster.webp" shadow-intensity="0.5" 
   exposure="1.09" shadow-softness="1" 
@@ -95,8 +95,17 @@
   const moveToHotspot = (hotspot) => {
     const ds = hotspot.dataset;
     if (ds.target) model.cameraTarget = ds.target;
-    if (ds.orbit) model.cameraOrbit = ds.orbit;
-    model.fieldOfView = "25deg";
+   if (ds.orbit) {
+      
+      const parts = ds.orbit.split(" ");
+      const radius = parseFloat(parts[2]); 
+      const zoom = radius * 0.6; 
+
+      const newOrbit = `${parts[0]} ${parts[1]} ${zoom}m`;
+      model.cameraOrbit = newOrbit;
+    }
+
+    model.fieldOfView = "22deg"; 
   };
 
   model.querySelectorAll(".Hotspot").forEach(btn => {
