@@ -12,11 +12,11 @@
     
     <!-- <model-viewer> HTML element -->
     <model-viewer id="island" src="island8.glb" 
-  ar interpolation-decay="200" ar-modes="scene-viewer webxr quick-look" 
+  ar interpolation-decay="600" ar-modes="scene-viewer webxr quick-look" 
   camera-controls tone-mapping="neutral" 
   poster="poster.webp" shadow-intensity="0.5" 
   exposure="1.09" shadow-softness="1" 
-  camera-orbit="100.2deg 55.79deg 0.2357m" 
+  data-orbit="100.2deg 55.79deg 0.2357m" 
   data-fov="25.18deg">
 
       
@@ -65,7 +65,7 @@
   data-normal="-0.1078339193754152m 0.9938000977411225m 0.02707787956749265m"
   data-target="-0.0306m 0.0312m 0.0051m"
   data-orbit="45deg 75deg 0.25m"
-  camera-orbit="124.4deg 63.2deg 0.14m" 
+  data-orbit="124.4deg 63.2deg 0.14m" 
   data-fov="50deg"
   data-visibility-attribute="visible">
           <div class="HotspotAnnotation">sunbathing</div>
@@ -94,15 +94,15 @@
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  <script type="module">
-  const viewer = document.querySelector("#hotspot-camera-view-demo");
+<script type="module">
+  const viewer = document.querySelector("#island");
 
-  viewer.querySelectorAll('button').forEach((hotspot) => {
+  viewer.querySelectorAll('.Hotspot').forEach((hotspot) => {
     hotspot.addEventListener('click', () => {
       const orbit = hotspot.dataset.orbit;
       const target = hotspot.dataset.target;
-      const fov = hotspot.dataset.fov || '45deg'; // если не указано, ставим стандарт
-      
+      const fov = hotspot.dataset.fov || '45deg'; 
+
       if (orbit) viewer.cameraOrbit = orbit;
       if (target) viewer.cameraTarget = target;
       viewer.fieldOfView = fov;
