@@ -140,17 +140,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  viewer.addEventListener('progress', e => {
-    bar.style.width = `${e.detail.totalProgress * 100}%`;
-  });
 
-  viewer.querySelectorAll('.Hotspot').forEach(h => {
-    h.addEventListener('click', () => {
-      viewer.cameraOrbit = h.dataset.orbit;
-      viewer.cameraTarget = h.dataset.target;
-      viewer.fieldOfView = h.dataset.fov;
-    });
-  });
 </script>
 
     
