@@ -347,8 +347,8 @@ h2 {
 
  :root {
             /* Primary Colors */
-            --primary-pink: #FFC1CC;
-            --secondary-green: #606C38;
+            --primary-pink: #FB6F92;
+            --secondary-green: #FF8FAB;
             --dark-navy: #1A1A2E;
             --deep-navy: #0F0F1A;
             --light-gray: #F5F5F5;
@@ -361,7 +361,7 @@ h2 {
             --text-dark: #2C2C54;
             
             /* Gradients */
-            --gradient-primary: linear-gradient(135deg, #FFC1CC 0%, #606C38 100%);
+            --gradient-primary: linear-gradient(135deg, #FB6F92 0%, #FF8FAB 100%);
             --gradient-dark: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 100%);
             --gradient-green: linear-gradient(135deg, #00D4AA 0%, #00B89C 100%);
             
@@ -403,7 +403,7 @@ html {
 model-viewer {
             width: 100%;
             height: 90%;
-            background-color: #000000;
+            background-color: #1A1A2E;
             position: relative;
             overflow: visible;
 }
