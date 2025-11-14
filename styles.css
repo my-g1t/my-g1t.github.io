@@ -347,15 +347,15 @@ h2 {
 
  :root {
             /* Primary Colors */
-            --primary-pink: #AACC00;
-            --secondary-green: #FFB3C6;
+            --primary-pink: #FB6F92;
+            --secondary-pink: #FFB3C6;
             --dark-navy: #1A1A2E;
             --deep-navy: #0F0F1A;
             --light-gray: #F5F5F5;
             --white: #FFFFFF;
             
             /* Accent Colors */
-            --accent-green: #FB6F92;
+            --accent-green: #00D4AA;
             --accent-green-dark: #00B89C;
             --accent-pink: #FF6B9D;
             --text-dark: #2C2C54;
