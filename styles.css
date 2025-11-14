@@ -361,7 +361,7 @@ h2 {
             --text-dark: #2C2C54;
             
             /* Gradients */
-            --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            --gradient-primary: linear-gradient(135deg, #FFC1CC 0%, #606C38 100%);
             --gradient-dark: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 100%);
             --gradient-green: linear-gradient(135deg, #00D4AA 0%, #00B89C 100%);
             
