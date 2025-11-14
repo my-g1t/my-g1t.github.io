@@ -347,8 +347,8 @@ h2 {
 
  :root {
             /* Primary Colors */
-            --primary-pink: #FB6F92;
-            --secondary-green: #FF8FAB;
+            --primary-pink: #AACC00;
+            --secondary-green: #DDDF00;
             --dark-navy: #1A1A2E;
             --deep-navy: #0F0F1A;
             --light-gray: #F5F5F5;
@@ -361,7 +361,7 @@ h2 {
             --text-dark: #2C2C54;
             
             /* Gradients */
-            --gradient-primary: linear-gradient(135deg, #FB6F92 0%, #FF8FAB 100%);
+            --gradient-primary: linear-gradient(135deg, #AACC00 0%, #DDDF00 100%);
             --gradient-dark: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 100%);
             --gradient-green: linear-gradient(135deg, #00D4AA 0%, #00B89C 100%);
             
