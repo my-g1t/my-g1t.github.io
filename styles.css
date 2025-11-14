@@ -242,7 +242,7 @@ p {
         /* Title Slide */
 .title-slide {
             text-align: center;
-            background: radial-gradient(circle at center, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+         /*   background: radial-gradient(circle at center, rgba(255, 107, 53, 0.1) 0%, transparent 70%); */
         }
 
 .course-info {
