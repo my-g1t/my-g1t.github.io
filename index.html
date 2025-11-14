@@ -49,53 +49,7 @@
         html {
             scroll-behavior: smooth;
         }
-<!-- model-viewer библиотека -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
-<style>
-  .Hotspot {
-    background: #fff;
-    border-radius: 24px;
-    border: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-  }
-
-  .HotspotAnnotation {
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-    color: rgba(0,0,0,0.8);
-    font-size: 13px;
-    font-weight: 600;
-    position: absolute;
-    left: calc(100% + 0.5em);
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0.3em 0.6em;
-  }
-
-  .progress-bar {
-    display: block;
-    width: 33%;
-    height: 8px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .update-bar {
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 0%;
-    height: 100%;
-    border-radius: 5px;
-    transition: width 0.3s;
-  }
 
   #ar-button {
     background-image: url(ar_icon.png);
@@ -119,8 +73,24 @@
 </style>
 
 <script>
+window.addEventListener("DOMContentLoaded", () => {
   const viewer = document.querySelector('#island');
-  const bar = viewer.querySelector('.update-bar');
+  if (!viewer) return;
+
+  const bar = viewer.querySelector('.model-update-bar');
+
+  viewer.addEventListener('progress', e => {
+    if (bar) bar.style.width = `${e.detail.totalProgress * 100}%`;
+  });
+
+  viewer.querySelectorAll('.Hotspot').forEach(h => {
+    h.addEventListener('click', () => {
+      viewer.cameraOrbit = h.dataset.orbit;
+      viewer.cameraTarget = h.dataset.target;
+      viewer.fieldOfView = h.dataset.fov;
+    });
+  });
+});
 
   viewer.addEventListener('progress', e => {
     bar.style.width = `${e.detail.totalProgress * 100}%`;
@@ -755,9 +725,9 @@ As a C# developer, I focus on both the technical side—such as game mechanics, 
       <div class="HotspotAnnotation">fishing</div>
     </button>
 
-    <div class="progress-bar" slot="progress-bar">
-      <div class="update-bar"></div>
-    </div>
+   <div class="model-progress-bar" slot="progress-bar">
+  <div class="model-update-bar"></div>
+</div>
 
     <button slot="ar-button" id="ar-button">View in your space</button>
   </model-viewer>
