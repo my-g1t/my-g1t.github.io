@@ -100,3 +100,23 @@ document.querySelectorAll('#island').forEach(viewer => {
     },
   });
 });
+
+/*the second script from index*/
+window.addEventListener("DOMContentLoaded", () => {
+  const viewer = document.querySelector('#island');
+  if (!viewer) return;
+
+  const bar = viewer.querySelector('.model-update-bar');
+
+  viewer.addEventListener('progress', e => {
+    if (bar) bar.style.width = `${e.detail.totalProgress * 100}%`;
+  });
+
+  viewer.querySelectorAll('.Hotspot').forEach(h => {
+    h.addEventListener('click', () => {
+      viewer.cameraOrbit = h.dataset.orbit;
+      viewer.cameraTarget = h.dataset.target;
+      viewer.fieldOfView = h.dataset.fov;
+    });
+  });
+});
