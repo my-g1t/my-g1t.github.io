@@ -1,7 +1,3 @@
-:not(:defined) > * {
-  display: none;
-}
-
 html {
   height: 100%;
 }
