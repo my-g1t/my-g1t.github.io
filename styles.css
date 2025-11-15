@@ -185,7 +185,7 @@ p {
 
         /* Glass Morphism Cards */
  .overview-section, .session-card, .skill-card, .assessment-item, 
-.timeline-content, .project-card, {
+.timeline-content, .project-card, .content-card {
             background: var(--glass-bg);
             backdrop-filter: var(--glass-blur);
             padding: 30px;
@@ -194,8 +194,16 @@ p {
             border-left: 6px solid var(--accent-green);
             margin: 20px 0;
         }
-.content-card {
-    background: #1F1F2B; 
+
+/* Убираем градиенты у всех блоков портфолио */
+.content-card,
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+    background: #1F1F2B !important;
+    background-image: none !important;
 }
         
  .project-card {
