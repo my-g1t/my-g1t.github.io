@@ -457,14 +457,6 @@ model-viewer {
 
 
 
-
-.project-gallery {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden; 
-}
-
 .witch-swiper img {
   width: 100%;
   height: auto;
@@ -503,6 +495,15 @@ model-viewer {
     margin: 0;
   }
 
+/* Repeat
+.project-gallery {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden; 
+}*/
+  
+  
   .swiper-button-next,
   .swiper-button-prev {
     transform: scale(0.8);
