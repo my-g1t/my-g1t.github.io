@@ -123,6 +123,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 /*the last script from index*/
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  const witchSwiper = new Swiper('.witch-swiper', {
     loop: true,
     pagination: {
