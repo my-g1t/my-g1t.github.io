@@ -3,7 +3,7 @@ model-viewer#island {
   width: 100%;
   max-width: 100%;
   height: 420px;
-  background: #1A1A2E;
+  background: #fff;
   border-radius: 12px;
   position: relative;
   overflow: hidden !important; /* главное! предотвращает пропадание модели */
@@ -23,7 +23,7 @@ model-viewer#island {
 /* ------------------------------------------------------- */
 
 .Hotspot {
-  background: #00D4AA;
+  background: #FFFF00;
   border-radius: 50%;
   width: 20px;
   height: 20px;
