@@ -1,13 +1,31 @@
+// =========================
+// MODEL-VIEWER PROGRESS BAR
+// =========================
 const modelViewer = document.querySelector("#island");
-const progress = modelViewer.querySelector(".model-update-bar");
 
-// Progress bar
-modelViewer.addEventListener("progress", (event) => {
-  const value = event.detail.totalProgress;
-  progress.style.width = `${value * 100}%`;
-});
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.model-progress-bar');
+  const updatingBar = event.target.querySelector('.model-update-bar');
 
-// Hotspots click → change camera orbit
+  if (!progressBar || !updatingBar) return;
+
+  const progress = event.detail.totalProgress * 100;
+  updatingBar.style.width = progress + '%';
+
+  // Hide progress bar when fully loaded
+  if (progress === 100) {
+    progressBar.style.display = 'none';
+  } else {
+    progressBar.style.display = 'block';
+  }
+};
+
+modelViewer?.addEventListener('progress', onProgress);
+
+
+// =========================
+// HOTSPOTS CAMERA CONTROL
+// =========================
 document.querySelectorAll(".Hotspot").forEach(btn => {
   btn.addEventListener("click", () => {
     if (btn.dataset.orbit) {
