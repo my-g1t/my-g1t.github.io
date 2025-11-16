@@ -417,55 +417,6 @@ html {
             border: 1px solid #dadce0;
   }
 
-/*              
-.Hotspot {
-            background: #00D4AA;
-            border-radius: 24px;
-            border: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-            cursor: pointer;
-            height: 20px;
-            width: 20px;
-  }
-
-  .HotspotAnnotation {
-            background: #fff;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-            color: rgba(0,0,0,0.8);
-            font-size: 13px;
-            font-weight: 600;
-            position: absolute;
-            left: calc(100% + 0.5em);
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0.3em 0.6em;
-}
-
-.model-progress-bar {
-            display: block;
-            width: 33%;
-            height: 8px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .model-update-bar {
-            background-color: rgba(255, 255, 255, 0.9);
-            width: 0%;
-            height: 100%;
-            border-radius: 5px;
-            transition: width 0.3s;
-  }
-
-
-*/
-
-
 
 .witch-swiper img {
   width: 100%;
