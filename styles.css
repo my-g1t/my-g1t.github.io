@@ -21,6 +21,11 @@ body {
             position: relative;
         }
 
+#slide-4 {
+    min-height: auto;
+    justify-content: flex-start; 
+}
+
 .slide-content {
             max-width: 1400px;
             margin: 0 auto;
