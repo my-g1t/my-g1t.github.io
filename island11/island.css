@@ -93,12 +93,12 @@ model-viewer#island {
   padding: 0 12px 0 24px; 
 
   font-size: 11px; 
-  color: #4285f4;
+  color: #000000;
   height: 32px;
   line-height: 32px;
   border-radius: 16px;
   border: 1px solid #dadce0;
-  background-color: #FFC8DD;
+  background-color: #FFFF00;
 
   position: absolute;
   left: 50%;
