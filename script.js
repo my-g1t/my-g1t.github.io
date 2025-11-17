@@ -37,28 +37,61 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentSlide = 1;
 const totalSlides = 6;
 
-function updateProgressBar() {
- const progress = (currentSlide / totalSlides) * 100; 
-    
+function updateProgressBar(progress) { 
     const progressBar = document.getElementById('progressBar');
-    if (progressBar) progressBar.style.width = progress + '%';
+    if (progressBar) {
+        const safeProgress = Math.min(progress, 100); 
+        progressBar.style.width = safeProgress + '%';
+    }
 }
 
-
-
 function handleScroll() {
+    const scrollHeight = document.documentElement.scrollHeight;
+    
+    const windowHeight = window.innerHeight;
+    
+    const maxScroll = scrollHeight - windowHeight;
+    
+    const currentScroll = window.scrollY;
+
+    let progressPercentage = 0;
+
+    if (maxScroll > 0) {
+        progressPercentage = (currentScroll / maxScroll) * 100;
+    }
+
+    updateProgressBar(progressPercentage); 
+    
+   
     const slides = document.querySelectorAll('.slide');
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-    let newCurrentSlide = 1; // Всегда начинаем с 1
+    const scrollPosition = currentScroll + windowHeight / 2;
+    let newCurrentSlide = 1; 
 
     slides.forEach((slide, index) => {
         const top = slide.offsetTop;
         const bottom = top + slide.offsetHeight;
-
         if (scrollPosition >= top && scrollPosition < bottom) {
             newCurrentSlide = index + 1;
         }
     });
+
+    if (newCurrentSlide !== currentSlide) {
+        currentSlide = newCurrentSlide;
+        
+    }
+}
+
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(handleScroll, 50);
+});
+
+
+
+
+
+
 
     const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
     
