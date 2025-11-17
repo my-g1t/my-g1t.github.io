@@ -98,7 +98,7 @@ model-viewer#island {
   line-height: 32px;
   border-radius: 16px;
   border: 1px solid #dadce0;
-  background-color: #fff;
+  background-color: #FFC8DD;
 
   position: absolute;
   left: 50%;
@@ -110,4 +110,8 @@ model-viewer#island {
 
   text-align: center;
   white-space: nowrap;
+}
+
+model-viewer::part(ar-button) {
+  padding-left: 0 !important;
 }
