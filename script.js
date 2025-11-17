@@ -47,11 +47,8 @@ function updateProgressBar(progress) {
 
 function handleScroll() {
     const scrollHeight = document.documentElement.scrollHeight;
-    
     const windowHeight = window.innerHeight;
-    
     const maxScroll = scrollHeight - windowHeight;
-    
     const currentScroll = window.scrollY;
 
     let progressPercentage = 0;
@@ -61,8 +58,7 @@ function handleScroll() {
     }
 
     updateProgressBar(progressPercentage); 
-    
-   
+
     const slides = document.querySelectorAll('.slide');
     const scrollPosition = currentScroll + windowHeight / 2;
     let newCurrentSlide = 1; 
@@ -75,9 +71,10 @@ function handleScroll() {
         }
     });
 
+   
     if (newCurrentSlide !== currentSlide) {
         currentSlide = newCurrentSlide;
-        
+       
     }
 }
 
@@ -87,32 +84,8 @@ window.addEventListener('scroll', () => {
     scrollTimeout = setTimeout(handleScroll, 50);
 });
 
+document.addEventListener("DOMContentLoaded", handleScroll); 
 
-
-
-
-
-
-    const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
-    
-    if (window.scrollY >= scrollMax * 0.95) { 
-        newCurrentSlide = totalSlides; 
-    }
-    
-    if (newCurrentSlide !== currentSlide) {
-        currentSlide = newCurrentSlide;
-        updateProgressBar();
-    }
-}
-
-
-
-
-let scrollTimeout;
-window.addEventListener('scroll', () => {
-  clearTimeout(scrollTimeout);
-  scrollTimeout = setTimeout(handleScroll, 50);
-});
 
 
 /* ---------------------- CONTENT ANIMATION ---------------------- */
