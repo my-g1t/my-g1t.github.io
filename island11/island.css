@@ -87,12 +87,12 @@ model-viewer#island {
 #ar-button {
   background-image: url(ar_icon.png);
   background-repeat: no-repeat;
-  background-size: 18px 18px; /* Чуть меньше, чтобы не съедала текст */
-  background-position: 8px center; /* Иконка ближе к краю */
-  
-  padding: 0 12px 0 32px; /* Меньше слева, больше баланса */
-  
-  font-size: 9px;
+  background-size: 18px 18px;
+  background-position: 6px center; 
+
+  padding: 0 12px 0 28px; 
+
+  font-size: 10px; 
   color: #4285f4;
   height: 32px;
   line-height: 32px;
@@ -107,6 +107,7 @@ model-viewer#island {
 
   cursor: pointer;
   z-index: 20;
-  text-align: center; /* гарантированное центрирование текста */
-  white-space: nowrap; /* текст не переносится */
+
+  text-align: center;
+  white-space: nowrap;
 }
