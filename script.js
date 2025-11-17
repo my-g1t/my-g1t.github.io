@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.style.transform = 'translateY(0)';
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.01 });
 
   document.querySelectorAll('.content-card').forEach(el => {
     el.style.opacity = '0';
