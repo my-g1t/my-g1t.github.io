@@ -38,28 +38,42 @@ let currentSlide = 1;
 const totalSlides = 6;
 
 function updateProgressBar() {
-  const progress = (currentSlide / totalSlides) * 100;
-  const progressBar = document.getElementById('progressBar');
-  if (progressBar) progressBar.style.width = progress + '%';
+ const progress = (currentSlide / totalSlides) * 100; 
+    
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar) progressBar.style.width = progress + '%';
 }
+
+
 
 function handleScroll() {
-  const slides = document.querySelectorAll('.slide');
-  const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const slides = document.querySelectorAll('.slide');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    let newCurrentSlide = 1; // Всегда начинаем с 1
 
-  slides.forEach((slide, index) => {
-    const top = slide.offsetTop;
-    const bottom = top + slide.offsetHeight;
+    slides.forEach((slide, index) => {
+        const top = slide.offsetTop;
+        const bottom = top + slide.offsetHeight;
 
-    if (scrollPosition >= top && scrollPosition < bottom) {
-      const slideNumber = index + 1;
-      if (slideNumber !== currentSlide) {
-        currentSlide = slideNumber;
-        updateProgressBar();
-      }
+        if (scrollPosition >= top && scrollPosition < bottom) {
+            newCurrentSlide = index + 1;
+        }
+    });
+
+    const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
+    
+    if (window.scrollY >= scrollMax * 0.95) { 
+        newCurrentSlide = totalSlides; 
     }
-  });
+    
+    if (newCurrentSlide !== currentSlide) {
+        currentSlide = newCurrentSlide;
+        updateProgressBar();
+    }
 }
+
+
+
 
 let scrollTimeout;
 window.addEventListener('scroll', () => {
