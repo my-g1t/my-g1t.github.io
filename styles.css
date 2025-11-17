@@ -397,26 +397,6 @@ html {
         }
 
 
-#ar-button {
-            background-image: url(ar_icon.png);
-            background-repeat: no-repeat;
-            background-size: 20px 20px;
-            background-position: 12px 50%;
-            background-color: #fff;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 16px;
-            padding: 0 16px 0 40px;
-            font-family: Roboto, sans-serif;
-            font-size: 14px;
-            color: #4285f4;
-            height: 36px;
-            line-height: 36px;
-            border-radius: 18px;
-            border: 1px solid #dadce0;
-  }
-
 
 .witch-swiper img {
   width: 100%;
