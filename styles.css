@@ -229,6 +229,7 @@ p {
         }
 
 .project-gallery {
+          max-width: 100%;
           width: 100%;
           max-width: 600px; 
           margin: auto;
@@ -240,13 +241,13 @@ p {
         }
  @media (max-width: 768px) {
 .project-card {
-            display: flex;
-    flex-direction: column;
+    flex-direction: 1fr;
     gap: 1rem;
           }
         }
         
 .video-container {
+          width: 100%;
           position: relative;
           padding-bottom: 56.25%; /* 16:9 */
           height: 0;
@@ -451,11 +452,6 @@ html {
     gap: 1rem;
   }
 
-  .project-gallery {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-  }
 
   
   .swiper-button-next,
