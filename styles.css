@@ -312,6 +312,22 @@ p {
     margin-right: auto;
 }
 
+#island-section { 
+    min-height: auto; 
+    padding-top: 60px;
+    padding-bottom: 60px; 
+}
+
+model-viewer#island {
+    z-index: 1; 
+    position: relative; 
+}
+
+#next-section {
+    position: relative; 
+    z-index: 2; 
+}
+
 ul, ol {
     padding-left: 20px;
     margin-bottom: 1rem;
