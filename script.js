@@ -1,38 +1,33 @@
-/* ---------------------- MODEL-VIEWER PROGRESS BAR ---------------------- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  const viewer = document.querySelector('#island');
-  if (!viewer) return;
+    const viewer = document.querySelector('#island');
+    if (!viewer) return;
 
-  const progressBar = viewer.querySelector('.model-progress-bar');
-  const updateBar = viewer.querySelector('.model-update-bar');
+    const progressBar = viewer.querySelector('.model-progress-bar');
+    const updateBar = viewer.querySelector('.model-update-bar');
 
-  viewer.addEventListener('progress', (event) => {
-    const p = event.detail.totalProgress;
+    viewer.addEventListener('progress', (event) => {
+        const p = event.detail.totalProgress;
 
-    if (updateBar) {
-      updateBar.style.width = (p * 100) + '%';
-    }
+        if (updateBar) {
+            updateBar.style.width = (p * 100) + '%';
+        }
 
-    if (p === 1) {
-      progressBar?.classList.add("hide");
-    } else {
-      progressBar?.classList.remove("hide");
-    }
-  });
-
-  // Hotspots interactions
-  viewer.querySelectorAll('.Hotspot').forEach(h => {
-    h.addEventListener('click', () => {
-      if (h.dataset.orbit) viewer.cameraOrbit = h.dataset.orbit;
-      if (h.dataset.target) viewer.cameraTarget = h.dataset.target;
-      if (h.dataset.fov) viewer.fieldOfView = h.dataset.fov;
+        if (p === 1) {
+            progressBar?.classList.add("hide");
+        } else {
+            progressBar?.classList.remove("hide");
+        }
     });
-  });
+
+    viewer.querySelectorAll('.Hotspot').forEach(h => {
+        h.addEventListener('click', () => {
+            if (h.dataset.orbit) viewer.cameraOrbit = h.dataset.orbit;
+            if (h.dataset.target) viewer.cameraTarget = h.dataset.target;
+            if (h.dataset.fov) viewer.fieldOfView = h.dataset.fov;
+        });
+    });
 });
 
-
-/* ---------------------- SLIDES / PROGRESS BAR ---------------------- */
 
 let currentSlide = 1;
 const totalSlides = 6;
@@ -71,10 +66,8 @@ function handleScroll() {
         }
     });
 
-   
     if (newCurrentSlide !== currentSlide) {
         currentSlide = newCurrentSlide;
-       
     }
 }
 
@@ -86,33 +79,28 @@ window.addEventListener('scroll', () => {
 
 document.addEventListener("DOMContentLoaded", handleScroll); 
 
-
-
-/* ---------------------- CONTENT ANIMATION ---------------------- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  updateProgressBar();
+    updateProgressBar();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.01 });
+
+    document.querySelectorAll('.content-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
     });
-  }, { threshold: 0.01 });
 
-  document.querySelectorAll('.content-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(el);
-  });
-
-  // Swiper
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
-  });
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+    });
 });
