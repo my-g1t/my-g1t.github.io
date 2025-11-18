@@ -346,6 +346,12 @@ li {
     display: block;
 }
 
+#witch-section {
+    min-height: auto;
+    justify-content: flex-start; 
+    padding-top: 60px; 
+}
+
 .swiper-button-next,
 .swiper-button-prev {
     color: white;
