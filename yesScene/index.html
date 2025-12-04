@@ -9,7 +9,15 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer src="YesCatScene.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay camera-orbit="-4.719deg 64.9deg 15.24m" field-of-view="27.09deg">
+    <model-viewer src="YesCatScene.glb" 
+      ios-src="YesCat.usdz"
+      ar 
+      ar-modes="webxr scene-viewer quick-look" 
+      camera-controls tone-mapping="neutral" 
+      poster="poster.webp" 
+      shadow-intensity="1" 
+      autoplay camera-orbit="-4.719deg 64.9deg 15.24m" 
+      field-of-view="27.09deg">
       <button class="Hotspot" slot="hotspot-1" data-surface="6 0 141 165 189 0.642 0.094 0.264" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">Hooray! You found me, take a screenshot for the contest</div>
       </button>
